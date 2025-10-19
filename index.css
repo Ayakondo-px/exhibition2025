@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+  text-align: left;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 56px;
+  padding: 64px;
+}
+
+.exhibition-title {
+  color: #D50B00;
+  font-size: 40px;
+}
+
+.artist-credit {
+  color:black;
+  font-size: 20px;
+}
+
+
+
+.exhibition-top {
+  display: grid;
+  padding: 100px 0;
+  column-gap: 40px;
+  grid-template-rows: auto;
+
+  /* ▼デフォルト（＝画面が広い時）横並び */
+  grid-template-areas:
+    "gallery title"
+    "gallery credit";
+}
+
+.title-block {
+  grid-area: title;
+  text-align: left;
+}
+
+.top-block {
+  grid-area: gallery;
+  max-height: 602px;
+}
+
+.top-block img {
+  width: auto;
+  height: clamp(200px, 50vh, 280px);
+}
+
+.artist-credit {
+  grid-area: credit;
+  text-align: left;
+  display: flex;
+  justify-content: left;
+  align-items: flex-end; /* flex内で下揃え */
+  
+}
+
+/* ---------- 画面が狭いとき（例: 899px以下） ---------- */
+@media (max-width: 899px) {
+  .exhibition-top {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "gallery"
+      "credit";
+    
+    max-width: 95vw;
+    row-gap: 24px;
+  }
+
+  .top-block img {
+    width: auto;
+    height: clamp(80px, 50vh, 160px);
+    
+  }
+
+  .title-block,
+  .artist-credit {
+    text-align: left; 
+  }
+
+  .exhibition-title {
+    font-size: 28px;
+  }
+
+  .artist-credit {
+    font-size: 12px;
+  }
+
+
+}
