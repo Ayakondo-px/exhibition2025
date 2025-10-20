@@ -30,13 +30,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   gap: 56px;
   padding: 100px;
   margin: 0px;
 
   @media (max-width: 899px) {
      max-width: 95vw;
-     padding: 20px;
+     padding: 50px;
   }
 }
 
@@ -202,6 +203,7 @@ body {
   flex: 1;
   justify-content: space-between;
   align-items: end;
+  padding-top: 50px;
 }
 
 .room1-footer p {
@@ -319,6 +321,7 @@ body {
   flex-direction: column-reverse;
   align-items: flex-start;
   row-gap: 16px;
+  padding-top: 50px;
 }
 
 .room2-footer p {
@@ -349,3 +352,114 @@ body {
 }
 
 
+/* workのCSS */
+
+.work-detail {
+ display: flex;
+ flex-direction: column;
+ justify-content: center; 
+ align-items: center; 
+ gap: 40px;
+ padding-bottom: 100px;
+
+ @media (max-width: 899px) {
+  padding-bottom: 0px;
+ }
+}
+
+.detail {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 30px;
+
+  @media (max-width: 899px) {
+    flex-wrap: wrap;
+  }
+}
+
+
+.detail img {
+  width: clamp(360px, 100%, 620px);
+  height: auto;
+}
+
+.caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+
+  @media (max-width: 899px) {
+    gap: 12px;
+  }
+}
+
+.work-thecherryfalls-link {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 12px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.work-thecherryfalls-link p {
+  color: #D50B00;
+}
+
+.work-thecherryfalls-link img {
+  width: 18px ;
+  height: auto;
+  padding-bottom: 6px;
+}
+
+.work-theegglistens-link {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 12px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.work-theegglistens-link p {
+  color: #D50B00;
+}
+
+.work-theegglistens-link img {
+  width: 18px ;
+  height: auto;
+  padding-bottom: 6px;
+}
+
+.work-poem {
+  font-size: 14px;
+  padding-bottom: 40px;
+
+  @media (max-width: 899px) {
+    font-size: 10px;
+    padding-bottom: 20px;
+  }
+}
+
+.work-title {
+  font-size: 28px;
+
+  @media (max-width: 899px) {
+    font-size: 24px;
+  }
+}
+
+.work-size
+.work-medium
+.work-year {
+  font-size: 18px;
+
+  @media (max-width: 899px) {
+    font-size: 10px;
+  }
+}
