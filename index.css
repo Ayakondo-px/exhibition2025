@@ -384,7 +384,7 @@ body {
 
 
 .detail img {
-  width: clamp(300px, 100%, 620px);
+  width: clamp(300px, 100%, 450px);
   height: auto;
 
   @media (max-width) {
