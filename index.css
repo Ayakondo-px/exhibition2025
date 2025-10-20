@@ -384,8 +384,13 @@ body {
 
 
 .detail img {
-  width: clamp(360px, 100%, 620px);
+  width: clamp(300px, 100%, 620px);
   height: auto;
+
+  @media (max-width) {
+    width:(280px, 100%, 400px);
+    height:auto;
+  }
 }
 
 .caption {
