@@ -229,3 +229,123 @@ body {
   gap: 8px;
   text-align: right;
 }
+
+/* room2のCSS */
+
+.room2 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 16px;
+
+  @media (max-width: 899px){
+    flex-direction: column;  /* ← 縦並びに切り替え！ */
+    align-items: center;         /* 横方向の中央揃え（クロス軸） */
+    justify-content: center;     /* 縦方向の中央揃え（メイン軸） */
+    text-align: center;          /* ← テキストも中央寄せ（任意） */
+    width: 100%; 
+    max-width: 350px;
+  }
+}
+
+.room2-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 40px;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 899px) {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+
+.room2-header img {
+  width: clamp(300px, 100%, 360px);
+  height: auto;
+
+  @media (max-width: 899px) {
+    width: clamp(100px, 100%, 210px);
+    height: auto;
+  }
+}
+
+.room2-title {
+  color: #D50B00;
+  font-size: 36px;
+  text-align: right;
+
+
+  @media (max-width: 899px) {
+    font-size: clamp(24px, 100%, 30px);
+  }
+}
+
+.room2-works {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+
+  z-index: 2;
+
+  @media (max-width: 899px) {
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    margin-left: 0px;
+  }
+}
+
+.room2-works img {
+  width: clamp(300px, 30vw, 360px);
+  height: auto;
+  aspect-ratio: 5 / 4; 
+  object-fit: cover;
+
+  @media (max-width: 899px) {
+    width: clamp(300px, 100%, 400px);
+    height: auto ;
+  }
+}
+
+.room2-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  row-gap: 16px;
+}
+
+.room2-footer p {
+  color: #D50B00;
+}
+
+.room2-footer img {
+  width: 18px;
+  height: auto;
+  padding-bottom: 6px;
+}
+
+.top-link {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: end;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+
+.thecherryfalls-link {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: end;
+  gap: 8px;
+  text-align: left;
+}
+
+
