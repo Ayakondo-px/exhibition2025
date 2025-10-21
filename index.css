@@ -372,24 +372,30 @@ body {
 }
 
 .detail {
+  max-width: 1000px;
   display: flex;
   flex-direction: wrap;
+  justify-content: center;
   align-items: end;
   gap: 30px;
 
   @media (max-width: 899px) {
     flex-wrap: wrap;
+    justify-content: flex-start;
   }
 }
 
 .detail-vertical {
+  max-width: 900px;
   display: flex;
   flex-direction: wrap;
+  justify-content: center;
   align-items: end;
   gap: 30px;
 
   @media (max-width: 899px) {
     flex-wrap: wrap;
+    justify-content: flex-start;
   }
 }
 
